@@ -1,0 +1,34 @@
+/* pages/money/money.wxss */
+
+.money-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+image{
+  margin-top: 120rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.balance{
+  margin-top: 10rpx;
+  font-size:64rpx;
+  color:rgba(53,53,53,1);
+  line-height:90rpx;
+}
+
+.balance::before{
+  content: "￥"
+}
+
+.main-button{
+  margin-top: 90rpx;
+  margin-bottom: 10rpx;
+}
+
+.cash-tip{
+  margin-top: 30rpx;
+  font-size:24rpx;
+  color:rgba(127,131,137,1);
+}

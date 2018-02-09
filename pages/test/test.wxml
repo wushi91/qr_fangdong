@@ -1,0 +1,19 @@
+<!--pages/test/test.wxml-->
+
+<import src="./templates/bookList.wxml"/>
+<import src="./templates/billList.wxml"/>
+
+
+<view class='money-wrapper'>sdffsdff</view>
+<tobTab>
+  <view slot="allBill" class='book-list'>
+   <template is="bookItem" data="{{ordersList:ordersList,loading:loading}}"/>
+  </view>
+
+  <view slot="unpayBill" class='bill-list'>
+   <template is="billItem" data="{{ordersList:ordersList,loading:loading}}"/>
+   <view class='line'></view>
+   <template is="billItem" data="{{ordersList:ordersList,loading:loading}}"/>
+  </view>
+
+</tobTab>

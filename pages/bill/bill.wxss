@@ -1,0 +1,50 @@
+/* pages/bill/bill.wxss */
+
+
+.list-wrapper{
+  padding-top: 100rpx;
+  padding-bottom: 30rpx;
+}
+
+.month-title{
+  display: inline-block;
+  padding: 30rpx 30rpx 16rpx 30rpx;
+}
+
+.bill-item{
+  background: white;
+  padding: 20rpx 30rpx;
+}
+
+.bill-item{
+  /*兄弟选择器  */
+  margin-top: 20rpx;
+}
+
+.bill-item + .bill-item{
+  /*兄弟选择器  */
+  margin-top: 20rpx;
+}
+
+.bill-item view{
+  display: flex;
+}
+
+.bill-item view:nth-child(2){
+  margin-bottom: 6rpx;
+}
+
+.bill-item view :first-child{
+  flex: 1;
+}
+
+.blank-title{
+  width: 100%;
+  margin-top: 346rpx;
+  display: inline-block;
+  text-align: center;
+  font-size:34rpx;
+  color:rgba(127,131,137,1);
+  line-height:48rpx;
+}
+

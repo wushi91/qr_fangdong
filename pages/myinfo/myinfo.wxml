@@ -1,0 +1,19 @@
+<!--pages/myinfo/myinfo.wxml-->
+<view class='user-info-wrapper'>
+    <image class='header-image' src="{{headerimagesrc}}" bindtap="toMyUserLogin"></image>
+    <text class='username' bindtap="wxLogin">{{ username }}</text>
+</view>
+
+<button  class='item contact-button' open-type='contact'>
+  
+    <text>意见反馈</text>
+    <image src="/images/can-into-right.png"></image>
+ 
+</button>
+
+<!-- <view class='item' >
+    <text>绑定手机号</text>
+    <image src="/images/can-into-right.png"></image>
+</view> -->
+
+

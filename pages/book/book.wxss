@@ -1,0 +1,78 @@
+/* pages/book/book.wxss */
+
+.list-wrapper{
+  padding-top: 100rpx;
+}
+
+.book-item{
+  position: relative;
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.book-item text + text{
+  margin-top: 6rpx;
+}
+
+.item-wrapper{
+  position: relative;
+} 
+
+.has-move .book-item{
+  transform: translateX(-124rpx);
+}
+
+.item-wrapper .btn-del{
+  background-color: rgba(242,73,73,1);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 124rpx;
+  height: 100%;
+  font-size: 24rpx;
+  border-radius: 0px;
+  align-items: center;
+  z-index: 1;
+  justify-content: center;
+}
+
+
+
+.has-no-book {
+  padding-top: 250rpx;
+  align-self: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.has-no-book image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.has-no-book text{
+  font-size:34rpx;
+  color:rgba(127,131,137,1);
+  line-height:48rpx;
+}
+
+.blank-title{
+  width: 100%;
+  margin-top: 346rpx;
+  display: inline-block;
+  text-align: center;
+  font-size:34rpx;
+  color:rgba(127,131,137,1);
+  line-height:48rpx;
+}

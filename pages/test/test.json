@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tobTab": "/components/tobTab/tobTab"
+  }
+}

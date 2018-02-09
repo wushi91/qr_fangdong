@@ -1,0 +1,92 @@
+<!--pages/renter/renterDetail/renterDetail.wxml-->
+<view class='tob-tab'>
+  <view wx:for="{{tab_status}}"  wx:key
+        class='tob-tab-item {{currentStatus===tab_status[index].prop?"tob-tab-item-select":""}}' 
+        data-current-status="{{tab_status[index].prop}}" 
+        bindtap='payTabClick'>
+    <text>{{tab_status[index].label}}</text>
+  </view>
+</view>
+
+
+<view class='list-wrapper' wx-if='{{currentStatus===tab_status[0].prop}}'>
+  <view class='renter-detail'>
+    <view class='item title-wrapper'>
+      <text class='font-content-title'>{{renterDetail.address}}</text>
+    </view>
+  
+  <view class='item'>
+    <text class='font-list-item'>姓名</text>
+    <text class='font-list-item'>{{renterDetail.name}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-list-item'>手机号</text>
+    <text class='font-list-item'>{{renterDetail.phone}}</text>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='item'>
+    <text class='font-list-item'>起租日期</text>
+    <text class='font-list-item'>{{renterDetail.start_time}}</text>
+  </view>
+
+
+  <view class='item'>
+    <text class='font-list-item'>截止日期</text>
+    <text class='font-list-item'>{{renterDetail.end_time}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-list-item'>租期时长</text>
+    <text class='font-list-item'>{{renterDetail.rent_month}}个月</text>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='item'>
+    <text class='font-list-item'>交租方式</text>
+    <text class='font-list-item'>{{renterDetail.pay_type}}月/付</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-list-item'>交租日期</text>
+    <text class='font-list-item'>{{renterDetail.pay_time}}号</text>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='item'>
+    <text class='font-list-item'>押金</text>
+    <text class='font-list-item'>{{renterDetail.security_deposit/100}}元</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-list-item'>每月租金</text>
+    <text class='font-list-item'>{{renterDetail.rent/100}}元</text>
+  </view>
+</view>
+<view class='btn-wrapper'>
+  <!-- <button class='main-button'>编辑租客信息</button> -->
+  <button class='white-button' bindtap='showDeleteTheRenter'>租客退房</button>
+</view>
+</view>
+
+
+<view class='list-wrapper' wx-if='{{currentStatus===tab_status[1].prop}}'>
+
+<view wx:if='{{renterRecordList===null||renterRecordList.length===0}}'>
+    <text class='blank-title'>没有交易记录</text>
+  </view>
+  <view wx:else>
+  <view class='record-item' wx:for="{{renterRecordList}}" wx:key bindtap='toRentDetailPage'  data-pay-id='{{item.pay_id}}'>
+    <view>
+      <text>{{item.title}}</text>
+      <text class='font-black-money'>{{item.balance/100}}</text>
+    </view>
+    <text class='font-list-item-gray'>{{item.trading_time}}</text>
+ 
+  </view>
+</view>
+</view>

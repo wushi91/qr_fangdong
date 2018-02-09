@@ -1,0 +1,25 @@
+<!--pages/book/addBook/addBook.wxml-->
+
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+
+  <view class='item'>
+    <span style='color:rgba(178,178,178,1);' wx:if='{{region.length===0?true:false}}'>请选择房源所在城市</span>
+    <span wx:else>{{region[0]}} {{region[1]}} {{region[2]}}</span>
+    <image src="/images/can-into-right.png"></image>
+   </view>
+  
+</picker>
+
+<view class='textarea-wrapper'>
+
+<input  class='font-list-item'
+        bindinput="bindHouseNameInput" 
+        placeholder-style="color:rgba(178,178,178,1);" 
+        maxlength='60' 
+        placeholder="请填写账本名称，如房源地址、房号等" 
+        />
+
+</view>
+
+
+<button class='main-button {{inputHouseName&&region.length>0?"":"disabled"}}' disabled='{{inputHouseName&&region.length>0?false:true}}' bindtap='toAddRoom'>保存</button>

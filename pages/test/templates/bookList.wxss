@@ -1,0 +1,55 @@
+
+/*总体布局  */
+.book-item{
+  display: flex;
+}
+
+.book-item-info{
+  display: flex;
+  flex-direction: column;
+}
+
+/*间距 背景 */
+
+.book-item{
+  background-color: white;
+  padding: 20rpx 30rpx;
+}
+
+.book-item:active{
+  background-color: #E6E6E6;
+}
+
+.renter-header{
+  margin-right: 20rpx;
+}
+
+.item-text + .item-text{
+  margin-top: 6rpx;
+}
+
+
+
+
+/* 字体、大小、宽高*/
+.font-black-34{
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+.font-gray-24{
+  font-size:24rpx;
+  color:rgba(136,136,136,1);
+  line-height:33rpx;
+}
+.font-red-24{
+  font-size:24rpx;
+  color:rgba(242,73,73,1);
+  line-height:33rpx;
+}
+
+.renter-header{
+  height: 86rpx;
+  width: 86rpx;
+}
+

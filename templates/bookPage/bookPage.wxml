@@ -1,0 +1,19 @@
+<import src="/templates/bookItem/bookItem.wxml"/>
+<import src="/templates/billItem/billItem.wxml"/>
+
+<template name="bookpage">
+
+<view class='money-wrapper'>sdffsdff</view>
+
+
+<ViewPage>
+  <view slot="allBill" class='book-list' wx:for='{{bookList}}' wx:key>
+    <template is="bookItem" data="{{bookData:item,loading:loading}}"/>
+  </view>
+
+  <view slot="unpayBill" class='bill-list' wx:for='{{billList}}' wx:key>
+    <template is="billItem" data="{{billData:item}}"/>
+    <view class='line' wx:if="{{index<billList.length-1}}"></view>
+  </view>
+</ViewPage>
+</template>

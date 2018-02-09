@@ -1,0 +1,37 @@
+/* pages/beanDetail/beanDetail.wxss */
+
+.title-wrapper{
+  padding: 20rpx 30rpx;
+  background-color: white;
+}
+.title{
+  font-weight: 500;
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+
+.item-wrapper{
+  padding: 30rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+
+.item{
+  display: flex;
+}
+
+.item:first-child{
+  align-items: center;
+}
+
+.item :first-child{
+  flex: 1;
+}
+
+.line{
+  margin: 30rpx 0;
+}
+.item + .item{
+  margin-top: 20rpx;
+}

@@ -1,0 +1,41 @@
+/* pages/money/getCash/getCash.wxss */
+
+.cash-wrapper{
+  padding: 20rpx 30rpx 30rpx 30rpx;
+  background-color: white;
+}
+
+.input-wrapper{
+  margin: 20rpx 0 10rpx 0;
+  display: flex;
+}
+.input-wrapper::before{
+   content: '¥';
+   font-size:64rpx;
+   color:rgba(0,0,0,1);
+  line-height:90rpx;
+}
+
+input{
+  height: 90rpx;
+  font-size:64rpx;
+  color:rgba(0,0,0,1);
+  line-height:90rpx;
+}
+
+.cash-tip{
+  display: inline-block;
+  margin-top: 20rpx;
+}
+
+/* .cash-tip::before {
+  content: '';
+} */
+
+.font-tip.error-tip{
+  color:rgba(242,73,73,1);
+}
+
+button{
+  margin-top: 186rpx;
+}

@@ -1,0 +1,137 @@
+<!--pages/beanDetail/beanDetail.wxml-->
+<view class='title-wrapper'>
+  <text class='title'>{{address}}</text>
+</view>
+
+<!--账单详情  -->
+<view class='item-wrapper' wx:if='{{type==="bill_detail_nopay"||type==="bill_detail_haspay"}}'>
+  <view class='item'>
+    <text class='font-item-gray30'>账单金额</text>
+    <text class='{{type==="bill_detail_nopay"?"font-red-money":"font-black-money"}}'>{{billDetail.rent/100}}</text>
+  </view>
+  <view class='line'></view>
+  <view class='item'>
+    <text class='font-item-gray30'>租客姓名</text>
+    <text class='font-item-gray30'>{{billDetail.name}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>手机号码</text>
+    <text class='font-item-gray30'>{{billDetail.phone}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>租金时间</text>
+    <text class='font-item-gray30'>{{billDetail.start_time}}-{{billDetail.end_time}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交租日期</text>
+    <text class='font-item-gray30'>{{billDetail.pay_time}}号</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>当前状态</text>
+    <text class='{{type==="bill_detail_nopay"?"font-item-red30":"font-item-gray30"}}'>{{type==="bill_detail_nopay"?"未结清":"已结清"}}</text>
+  </view>
+</view>
+
+
+<!--收租详情  -->
+<view class='item-wrapper' wx:if='{{type==="rent_detail"}}'>
+  <view class='item'>
+    <text class='font-item-gray30'>收租金额</text>
+    <text class='font-black-money"'>{{rentDetail.balance/100}}</text>
+  </view>
+  <view class='line'></view>
+  <view class='item'>
+    <text class='font-item-gray30'>租金时间</text>
+    <text class='font-item-gray30'>{{rentDetail.start_time}} - {{rentDetail.end_time}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>当前状态</text>
+    <text class='font-item-gray30'>交易{{rentDetail.status}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交易时间</text>
+    <text class='font-item-gray30'>{{rentDetail.trading_time}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交易方式</text>
+    <text class='font-item-gray30'>{{rentDetail.paytype}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交易单号</text>
+    <text class='font-item-gray30"'>{{rentDetail.orderid}}</text>
+  </view>
+</view>
+
+
+
+<!--提现详情  -->
+<view class='item-wrapper' wx:if='{{type==="get_cash_detail"}}'>
+  <view class='item'>
+    <text class='font-item-gray30'>提现金额</text>
+    <text class='font-black-money"'>{{getCashDetail.balance/100}}</text>
+  </view>
+  <view class='line'></view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>当前状态</text>
+    <text class='font-item-gray30'>交易{{getCashDetail.status}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交易时间</text>
+    <text class='font-item-gray30'>{{getCashDetail.trading_time}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>到账方式</text>
+    <text class='font-item-gray30'>{{getCashDetail.paytype}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交易单号</text>
+    <text class='font-item-gray30"'>{{getCashDetail.orderid}}</text>
+  </view>
+</view>
+
+
+<!--逾期详情  -->
+<view class='item-wrapper' wx:if='{{type==="outdate_detail"}}'>
+  <view class='item'>
+    <text class='font-item-gray30'>逾期金额</text>
+    <text class='font-red-money'>{{outdateDetail.rent}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>逾期时长</text>
+    <text class='font-item-red30'>{{outdateDetail.overdueNum}}天</text>
+  </view>
+  
+  <view class='line'></view>
+  <view class='item'>
+    <text class='font-item-gray30'>租客姓名</text>
+    <text class='font-item-gray30'>{{outdateDetail.name}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>手机号码</text>
+    <text class='font-item-gray30'>{{outdateDetail.phone}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>交租日期</text>
+    <text class='font-item-gray30'>{{outdateDetail.pay_time}}号</text>
+  </view>
+
+  <view class='item'>
+    <text class='font-item-gray30'>每月租金</text>
+    <text class='font-item-gray30'>{{outdateDetail.rent}}元</text>
+  </view>
+</view>

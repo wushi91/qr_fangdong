@@ -1,0 +1,192 @@
+<!--pages/bill/bill.wxml-->
+
+
+<view class='tob-tab'>
+  <view wx:for="{{tab_status}}"  wx:key
+        class='tob-tab-item {{currentStatus===tab_status[index].prop?"tob-tab-item-select":""}}' 
+        data-current-status="{{tab_status[index].prop}}" 
+        bindtap='payTabClick'>
+    <text>{{tab_status[index].label}}</text>
+  </view>
+</view>
+
+<view class='list-wrapper' wx-if='{{currentStatus===tab_status[0].prop}}'>
+
+  <view wx:if='{{allBillList===null||allBillList.length===0}}'>
+    <text class='blank-title'>你还没有账单</text>
+  </view>
+  <view wx:else>
+  <view class='bill-item' bindtap='{{item.settle==="否"?"toUnpayBillDetailPage":"toHaspayBillDetailPage"}}' data-billid="{{item.id}}"  wx:for="{{allBillList}}" wx:key >
+      <view>
+        <text class='font-list-item'>{{item.address}}</text>
+        <text wx:if='{{item.settle==="否"}}'  class='font-red-money'>{{item.rent}}</text>
+        <text wx:else class='font-black-money'>{{item.rent}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>{{item.start_time}}-{{item.end_time}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：{{item.pay_time}}号</text>
+        <text wx:if='{{item.settle==="是"}}'  class='font-list-item-gray'>已结清</text>
+        <text wx:else class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    </view>
+</view>
+
+
+<view class='list-wrapper' wx-if='{{currentStatus===tab_status[1].prop}}'>
+
+  <view wx:if='{{unpayBillList===null||unpayBillList.length===0}}'>
+    <text class='blank-title'>你还没有未结清账单</text>
+  </view>
+  <view wx:else>
+  <view class='bill-item' bindtap='toUnpayBillDetailPage' data-billid="{{item.id}}"  wx:for="{{unpayBillList}}" wx:key >
+      <view>
+        <text class='font-list-item'>{{item.address}}</text>
+        <text class='font-red-money'>{{item.rent}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>{{item.start_time}}-{{item.end_time}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：{{item.pay_time}}号</text>
+        <text wx:if='{{item.settle==="是"}}'  class='font-list-item-gray'>已结清</text>
+        <text wx:else class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    </view>
+</view>
+
+
+
+<view class='list-wrapper' wx-if='{{currentStatus===tab_status[2].prop}}'>
+
+  <view wx:if='{{haspayBillList===null||haspayBillList.length===0}}'>
+    <text class='blank-title'>你还没有已结清账单</text>
+  </view>
+  <view wx:else>
+
+  <view class='bill-item' bindtap='toHaspayBillDetailPage' data-billid="{{item.id}}" wx:for="{{haspayBillList}}" wx:key>
+      <view>
+        <text class='font-list-item'>{{item.address}}</text>
+        <text class='font-black-money'>{{item.rent}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>{{item.start_time}}-{{item.end_time}}</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：{{item.pay_time}}</text>
+        <text class='font-list-item-gray'>已结清</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='list-wrapper'>
+  <view class='month-item'>
+    <text class='month-title font-tip'>12月</text>
+    
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+  </view>
+  <view class='month-item'>
+    <text class='month-title font-tip'>11月</text>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='month-item'>
+    <text class='month-title font-tip'>10月</text>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    <view class='bill-item'>
+      <view>
+        <text class='font-list-item'>都市名园D栋26G</text>
+        <text class='font-red-money'>5000</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>2017/12/01-2017/12/30</text>
+      </view>
+      <view>
+        <text class='font-list-item-gray'>交租日期：30号</text>
+        <text class='font-list-item-red'>未结清</text>
+      </view>
+    </view>
+    
+  </view>
+
+
+</view> -->

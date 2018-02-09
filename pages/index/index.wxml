@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+
+
+<import src="/templates/bookPage/bookPage.wxml"/>
+<import src="/templates/mePage/mePage.wxml"/>
+
+<template is="bookpage" 
+          data="{{bookList:bookList,billList:billList}}"
+          wx:if="{{showBookPage}}"/>
+
+<template is="mePage" 
+          data="{{headerimagesrc:headerimagesrc,username:username}}"
+          wx:else/>
+
+<view class='bottom-tab-wrapper'>
+  <bottomTab bindcatchItemTab='catchItemTab'></bottomTab>
+</view>

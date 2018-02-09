@@ -1,0 +1,46 @@
+/* pages/record/record.wxss */
+
+.list-wrapper{
+  padding-bottom: 30rpx;
+}
+
+.record-item-wrapper{
+  background-color: white;
+}
+.month-title{
+  display: inline-block;
+  padding: 30rpx 30rpx 16rpx 30rpx;
+}
+
+.record-item{
+  background: white;
+  padding: 20rpx 30rpx;
+ 
+}
+
+.record-item view::first-child text{
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+
+.record-item view:first-child{
+   display: flex;
+   margin-bottom: 6rpx;
+}
+.record-item view:first-child text:first-child{
+  flex: 1;
+}
+.line{
+  margin: 0 30rpx;
+}
+
+.blank-title{
+  width: 100%;
+  margin-top: 346rpx;
+  display: inline-block;
+  text-align: center;
+  font-size:34rpx;
+  color:rgba(127,131,137,1);
+  line-height:48rpx;
+}

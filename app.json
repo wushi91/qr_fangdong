@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book/book",
+    
+    "pages/test/test",
+    
+    
+    
+    "pages/book/addRoom/addRoom",
+    "pages/renter/addRenter/addRenter",
+    "pages/money/money",
+    "pages/money/getCash/getCash",
+    
+    "pages/record/record",
+    "pages/bill/bill",
+    "pages/myinfo/myinfo",
+    "pages/renter/renterDetail/renterDetail",
+    "pages/operaResult/operaResult",
+    "pages/myinfo/bindPhone/bindPhone",
+    "pages/beanDetail/beanDetail"
+    
+  ],
+  "window": {
+    "navigationBarTitleText": "租房账本",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2E8AE6",
+    "navigationBarTextStyle": "white"
+  }
+}

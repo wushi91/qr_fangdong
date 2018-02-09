@@ -1,0 +1,30 @@
+<!--pages/operaResult/operaResult.wxml-->
+
+  <view wx:if="{{ operaType ==='get_cash_success' }}" class='wrapper'>
+    <image src="/images/image-success.png"></image>
+    <text class='opera-reulst'>{{cash}}元提现申请成功</text>
+    <text class='opera-tip'></text>
+    <button class='main-button' bindtap="backToIndexPage">返回首页</button>
+  </view>
+
+  <view wx:if="{{ operaType ==='get_cash_fail' }}" class='wrapper'>
+    <image src="/images/image-error.png"></image>
+    <text class='opera-reulst'>提现申请失败，请稍后重试</text>
+    <text class='opera-tip'></text>
+    <button class='main-button' bindtap="backToIndexPage">返回首页</button>
+  </view>
+
+  <view wx:if="{{ operaType ==='bind_phone_success' }}" class='wrapper'>
+    <image src="/images/image-success.png"></image>
+    <text class='opera-reulst'>手机号135 8340 7349绑定成功</text>
+    <text class='opera-tip'></text>
+    <button class='main-button' bindtap="backToMyInfoPage">返回我的</button>
+  </view>
+
+
+   <view wx:if="{{ operaType ==='添加成功' }}" class='wrapper'>
+    <image src="/images/image-success.png"></image>
+    <text class='opera-reulst'>你已成功添加该账本</text>
+    <text class='opera-tip'></text>
+    <button class='main-button' bindtap="backToIndexPage">返回首页</button>
+  </view>

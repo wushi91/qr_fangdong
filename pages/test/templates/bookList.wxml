@@ -1,0 +1,72 @@
+<template name="bookItem">
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-red-24 item-text'>添加租客信息</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+
+    <view class='book-item'>
+      <image class='renter-header' src='./images/icon-head-renter-default.png'></image>
+      <view class='book-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+        <text class='font-gray-24 item-text'>租期：2017/10/01-2018/09/30</text>
+      </view>
+    </view>
+</template>

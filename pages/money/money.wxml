@@ -1,0 +1,11 @@
+<!--pages/money/money.wxml-->
+
+<view class='money-wrapper'>
+  <image src="/images/icon-accountbalance.png"></image>
+  <text class='font-list-item'>账户余额</text>
+  <text class='balance'>{{balance}}</text>
+  
+  <button class='main-button {{balance===0?"disabled":""}}' bindtap='toGetCashPage' disabled='{{balance===0?true:false}}'>提现</button>
+  <view><text class='cash-tip'>提现申请后将在</text><text class='cash-tip' style='color:black'>24小时内</text><text class='cash-tip'>打入您的微信钱包</text></view>
+  <view><text class='cash-tip'>用户提现单笔单日限额</text><text class='cash-tip' style='color:#EC3039'>2万/2万</text></view>
+</view> 

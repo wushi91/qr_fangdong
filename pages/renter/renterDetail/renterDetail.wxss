@@ -1,0 +1,72 @@
+/* pages/renter/renterDetail/renterDetail.wxss */
+
+.list-wrapper{
+  padding-top: 100rpx;
+}
+
+.renter-detail{
+  padding: 30rpx 40rpx;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.renter-detail .item{ 
+  display: flex;
+}
+.renter-detail .item + .item{
+  margin-top: 30rpx;
+}
+
+.renter-detail .item :first-child{ 
+  flex: 1;
+}
+
+.line{
+  margin: 20rpx 0; 
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 50rpx;
+}
+
+.btn-wrapper button{
+  width: 480rpx;
+}
+
+
+
+
+
+/*交易记录  */
+
+.record-item{
+  background: white;
+  padding: 20rpx 30rpx;
+  margin: 20rpx 0;
+}
+
+.record-item view:first-child{
+   display: flex;
+}
+.record-item view:first-child text:first-child{
+  flex: 1;
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+
+.font-list-item-gray{
+  display: block;
+}
+
+.blank-title{
+  width: 100%;
+  margin-top: 346rpx;
+  display: inline-block;
+  text-align: center;
+  font-size:34rpx;
+  color:rgba(127,131,137,1);
+  line-height:48rpx;
+}

@@ -1,0 +1,99 @@
+<!--pages/renter/addRenter/addRenter.wxml-->
+
+<text class='room-name'>{{address}}</text>
+
+<view class='item-wrapper'>
+  <view class='item'>
+    <text>姓名</text>
+    <input  maxlength='11' 
+            show-confirm-bar='--'           
+            placeholder="请输入租客姓名" 
+            placeholder-style="color:rgba(178,178,178,1)"
+            bindinput='bindRenterNameInput' />
+  </view>
+  <view class='line'></view>
+  <view class='item'>
+    <text>手机号</text>
+    <input  maxlength='{{mabiLength}}' 
+            type='number'
+            bindfocus='clearKongge'
+            bindblur='regularPhone'
+            bindconfirm='regularPhone'
+            placeholder="请输入租客手机号" 
+            placeholder-style="color:rgba(178,178,178,1)"
+            bindinput='bindRenterPhoneInput'
+            value='{{renterPhone}}' />
+  </view>
+</view>
+<!--选择器  -->
+<view class='item-wrapper'>
+<view class='item picker-item'>
+  <text>起租日期</text>
+  <picker mode="date" bindchange="bindRentStartDateChange" value="{{rentStartDate}}">
+    <text class='font-list-item' wx:if='{{rentStartDate?true:false}}'>{{rentStartDate}}</text>
+    <text class='font-list-item font-gray' wx:else>请选择起租日期</text>
+  </picker>
+  <image src="/images/can-into-right.png"></image>
+</view>
+<view class='line'></view>
+<view class='item picker-item'>
+  <text>租期时长</text>
+  <picker mode="selector" bindchange="bindRentLengthChange" value="{{rentLengthArrayIndex}}" range="{{rentLengthArrayToWxss}}">
+    <text class='font-list-item' wx:if='{{rentLength?true:false}}'>{{rentLength}}个月</text>
+    <text class='font-list-item font-gray' wx:else>请选择租期时长</text>
+    <!-- <text class='font-list-item'>{{rentLengthArray[rentLengthArrayIndex]}}个月</text> -->
+  </picker>
+  <image src="/images/can-into-right.png"></image>
+</view>
+</view>
+
+<view class='item-wrapper'>
+<view class='item picker-item'>
+  <text>交租方式</text>
+  <picker mode="selector" bindchange="bindPayWayChange" value="{{payWayArrayIndex}}" range="{{payWayArrayToWxss}}">
+
+    <text class='font-list-item' wx:if='{{rentPayWay?true:false}}'>{{rentPayWay}}月/付</text>
+    <text class='font-list-item font-gray' wx:else>请选择交租方式</text>
+
+    <!-- <text class='font-list-item'>{{payWayArray[payWayArrayIndex]}}月/付</text> -->
+  </picker>
+  <image src="/images/can-into-right.png"></image>
+</view>
+<view class='line'></view>
+<view class='item picker-item'>
+  <text>交租日期</text>
+  <picker mode="selector" bindchange="bindPayDayChange" value="{{payDayArrayIndex}}" range="{{payDayArrayToWxss}}" >
+
+    <text class='font-list-item' wx:if='{{rentPayDate?true:false}}'>{{rentPayDate}}号</text>
+    <text class='font-list-item font-gray' wx:else>请选择交租日期</text>
+
+    <!-- <text class='font-list-item'>{{payDayArray[payDayArrayIndex]}}号</text> -->
+  </picker>
+  <image src="/images/can-into-right.png"></image>
+</view>
+</view>
+
+
+<view class='item-wrapper'>
+<view class='item'>
+  <text>押金</text>
+  <input  maxlength='6' 
+          type='number'
+          placeholder="请输入押金金额" 
+          placeholder-style="color:rgba(178,178,178,1)"
+          bindinput='bindYaJinMoneyInput'  />
+</view>
+<view class='line'></view>
+<view class='item'>
+  <text>每月租金</text>
+  <input  maxlength='6' 
+          type='number'
+          placeholder="请输入每月租金金额" 
+          placeholder-style="color:rgba(178,178,178,1)"
+          bindinput='bindRentMoneyInput'  />
+</view>
+</view>
+
+ <button class='main-button {{(renterName&&renterPhone&&rentStartDate&&rentLength&&rentPayWay&&rentPayDate&&yaJinMoney&&rentMoney)?"":"disabled"}}' bindtap='toAddRenter' disabled='{{(renterName&&renterPhone&&rentStartDate&&rentLength&&rentPayWay&&rentPayDate&&yaJinMoney&&rentMoney)?false:true}}'>保存</button> 
+
+<!-- <button class='main-button' bindtap='toAddRenter'>保存</button> -->

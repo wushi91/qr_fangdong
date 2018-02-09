@@ -1,0 +1,17 @@
+<!--pages/money/getCash/getCash.wxml-->
+<view class='cash-wrapper'>
+  <text class='font-tip'>提现金额</text>
+  <view class='input-wrapper'>
+
+  <input type='number' 
+          maxlength='5'
+          bindinput='bindMoneyInput'></input>
+  </view>
+  
+  <view class='line'></view>
+
+  <text class='cash-tip font-tip' wx:if='{{errorTip?false:true}}'>可提现金额 ¥{{balance}}</text>
+  <text class='cash-tip font-tip error-tip' wx:else>{{errorTip}}</text>
+</view>
+
+<button class='main-button {{errorTip||!inputMoney||balance===0?"disabled":""}}' bindtap='toGetCashOut' disabled='{{errorTip||!inputMoney||balance===0?true:false}}'>确认提现</button>

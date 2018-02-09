@@ -1,0 +1,41 @@
+<!--pages/myinfo/myinfo.wxml-->
+<template name="mePage">
+<view class='user-info-wrapper'>
+    <image class='header-image' src="{{headerimagesrc}}" bindtap="toMyUserLogin"></image>
+    <text class='font-normal-white-34' bindtap="toMyUserLogin">{{ username }}</text>
+</view>
+
+<view class='wrapper'>
+<view class='item-wrapper'>
+    <view class='item'>
+      <text class='font-normal-black-34'>我的账户</text>
+      <image src='/images/can-into-right.png'></image>
+    </view>
+</view>
+<view class='line'></view>
+<view class='item-wrapper'>
+    <view class='item'>
+      <text class='font-normal-black-34'>我的银行卡</text>
+      <image src='/images/can-into-right.png'></image>
+    </view>
+</view>
+</view>
+
+
+<view class='item-wrapper'>
+  <button  class='item contact-button' open-type='contact'>
+      <text class='font-normal-black-34'>意见反馈</text>
+      <image src='/images/can-into-right.png'></image>
+  </button>
+
+</view>
+
+    
+</template>
+
+<!-- <view class='item' >
+    <text>绑定手机号</text>
+    <image src="/images/can-into-right.png"></image>
+</view> -->
+
+

@@ -1,0 +1,97 @@
+/* pages/myinfo/myinfo.wxss */
+/*布局  */
+.user-info-wrapper{
+  background-color: #2E8AE6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 288rpx;
+}
+
+
+
+/*  */
+
+.wrapper{
+  background-color: white;
+  margin: 20rpx 0;
+}
+
+.item-wrapper .item{
+  height: 96rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 0 24rpx 0 30rpx;
+  
+}
+
+
+.item:active{
+  background-color: #E6E6E6;
+}
+
+
+.item text{
+  flex: 1;
+}
+
+.item image{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+/*字体  大小等*/
+text.font-normal-black-34{
+  font-size:34rpx;
+  color:rgba(0,0,0,1); 
+  line-height:48rpx;
+}
+
+text.font-normal-white-34{
+  font-size:34rpx;
+  color:white; 
+  line-height:48rpx;
+}
+
+.header-image{  
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 30rpx 0 20rpx 0;
+}
+
+
+/*适配样式  */
+button{
+  border: none;
+  border-radius: 0rpx;
+}
+button::after{
+  border: none;
+}
+
+
+/* 
+.item{
+  
+  text-align: left;
+  margin-top: 30rpx;
+  background-color: white;
+  display: flex;
+  padding: 14rpx 12rpx 14rpx 30rpx;
+  align-items: center; 
+}
+
+.item text{
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+  flex: 1;
+}
+
+.item image{
+  width: 60rpx;
+  height: 60rpx;
+} */

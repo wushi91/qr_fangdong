@@ -1,0 +1,24 @@
+  
+  <view class='bottom-tab'>
+    <view class='item {{currentStatus===tabStatus[0].prop?"item-select":""}}'
+          data-status='{{tabStatus[0].prop}}' catchtap='_catchItemTab'>
+      <image class='item-image' 
+             src="{{currentStatus===tabStatus[0].prop?tabStatus[0].iconselected:tabStatus[0].iconnormal}}"></image>
+      <text class='item-text'>{{tabStatus[0].label}}</text>
+    </view>
+    <view class='center' catchtap='_catchCenterItemTab'>
+      <image class='center-image'  
+             src="{{centerImage}}" 
+             bindtouchstart='_bindCenterItemTouchstart'
+             bindtouchend='_bindCenterItemTouchend'></image>
+    </view>
+    
+    <view class='item {{currentStatus===tabStatus[1].prop?"item-select":""}}'
+          data-status='{{tabStatus[1].prop}}' catchtap='_catchItemTab'>
+      <image class='item-image' 
+             src="{{currentStatus===tabStatus[1].prop?tabStatus[1].iconselected:tabStatus[1].iconnormal}}"></image>
+      <text class='item-text'>{{tabStatus[1].label}}</text>
+    </view>
+  </view>
+
+

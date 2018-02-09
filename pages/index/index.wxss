@@ -1,0 +1,33 @@
+ /* pages/index/index.wxss */
+
+@import "/templates/bookPage/bookPage.wxss";
+@import "/templates/mePage/mePage.wxss";
+
+/*页面布局  */
+.money-wrapper{
+  height:240rpx; 
+  background:rgba(46,138,230,1);
+  
+}
+
+
+.bottom-tab-wrapper{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*间隔  背景  */
+
+.bill-list{
+  background-color: white;
+}
+.book-item{
+  margin: 20rpx 0;
+}
+
+.line{
+  margin: 0 30rpx;
+}

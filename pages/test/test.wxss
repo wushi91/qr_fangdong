@@ -1,0 +1,18 @@
+/* pages/test/test.wxss */
+
+@import "./templates/billList.wxss";
+@import "./templates/bookList.wxss";
+
+.money-wrapper{
+  height:240rpx; 
+  background:rgba(46,138,230,1);
+  
+}
+
+.book-item{
+  margin: 20rpx 0;
+}
+
+.bill-item{
+  border-bottom: 2rpx solid #E6E6E6;
+}

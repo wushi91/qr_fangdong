@@ -1,0 +1,29 @@
+<template name="billItem">
+    <view class='bill-item'>
+      <image class='renter-header' src='/images/icon-head-renter-default.png'></image>
+      <view class='bill-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+      </view>
+
+      <view class='bill-money'>
+         <text class='font-red-36'>¥6800</text>
+      </view>
+    </view>
+
+
+    <!-- <view class='bill-item'>
+      <image class='renter-header' src='/images/icon-head-renter-default.png'></image>
+      <view class='bill-item-info'>
+        <text class='font-black-34 item-text'>嘉宾花园C栋20E</text>
+        <text class='font-gray-24 item-text'>张峰</text>
+      </view>
+
+      <view class='bill-money'>
+         <text class='font-blacks-36'>¥6800</text>
+      </view>
+    </view> -->
+
+
+    
+</template>

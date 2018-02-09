@@ -1,0 +1,35 @@
+<!--components/ViewPage/ViewPage.wxml-->
+<!--components/tobTab/tobTab.wxml-->
+<view class='tob-tab'>
+  <view wx:for="{{tabArray}}"  wx:key
+        class='tob-tab-item {{currentIndex===index?"tob-tab-item-select":""}}' 
+        data-current-status="{{tabArray[index].prop}}" 
+        data-current-index="{{index}}"
+        bindtap='payTabClick'>
+    <view class='text-wrapper'><text>{{tabArray[index].label}}</text></view>
+    
+    <view class='border'></view>
+  </view>
+</view>
+
+<swiper class="swiper-box" 
+        duration="300" 
+        bindchange="bindchange" 
+        current='{{currentIndex}}'
+        style="height: {{swiperHeight}}rpx;">
+
+  
+  <swiper-item wx:for="{{tabArray}}" wx:key>
+    <scroll-view scroll-y="true" 
+                 class="scroll-view-y" 
+                 scroll-with-animation="true" 
+                 scroll-top="{{scrollTop}}" 
+                 lower-threshold="50" 
+                 style="height: {{swiperHeight}}rpx;"
+                 bindscrolltolower="scrolltolower" >
+      <slot name="{{tabArray[index].prop}}" ></slot>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+

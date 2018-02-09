@@ -1,0 +1,50 @@
+/* components/bottomTab/bottomTab.wxss */
+
+
+
+.bottom-tab{
+  width: 100%;
+  height: 98rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background:rgba(255,255,255,0.93);
+  border-top: 1px rgba(50,51,51,0.1) solid;
+}
+
+.item{
+  margin: 0 60rpx;
+  padding: 0 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item .item-text{
+  margin-top: 3rpx;
+  font-size:20rpx;
+  color:rgba(161,164,166,1);
+}
+
+.item .item-image{
+  height: 54rpx;
+  width: 54rpx;
+}
+
+.item-select .item-text{
+  color:rgba(48,176,240,1);
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.center-image{
+  height: 72rpx;
+  width: 72rpx;
+}
+
+
